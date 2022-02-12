@@ -1,0 +1,29 @@
+#super market bill
+op=250
+sb=300
+rp=500
+bp=150
+mp=200
+cname=input('enter customer name:')
+cphno=int(input('enter customer phone number:'))
+opq=int(input('enter no of oli packets:'))
+sbq=int(input('enter no of soap boxes:'))
+rpq=int(input('enter no of rice packets:'))
+bpq=int(input('enter no of biscuit packets:'))
+mpq=int(input('enter no of millet packets:'))
+bill=(sb*sbq)+(op*opq)+(rp*rpq)+(bp*bpq)+(mp*mpq)
+if bill>=5000:
+    dis=bill*10/100
+    tax=0
+elif bill>=3000:
+    dis=bill*8/100
+    tax=0
+elif bill>=2000:
+    dis=bill*5/100
+    tax=dis*10/100
+else:
+    bill<=2000
+    dis=bill*3/100
+    tax=dis*18/100
+totalbill=bill-dis+tax
+print('bill amount:',totalbill)
